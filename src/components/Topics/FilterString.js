@@ -10,7 +10,7 @@ export default class FilterString extends Component {
         this.state = {
             movies: ["Star Wars", "Gone Girl", "The Avengers"],
             userInput: '',
-            filterMovies: []
+            filteredMovies: []
         };
     }
 
@@ -27,6 +27,7 @@ export default class FilterString extends Component {
                 filteredMovies.push(movies[i]);
             }
         }
+
         this.setState({ filteredMovies: filteredMovies});
     }
 
@@ -37,7 +38,7 @@ export default class FilterString extends Component {
                 <span className="puzzleText"> Movies { JSON.stringify(this.state.movies, null, 10)}</span>
                 <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
                 <button className="confirmationButton" onClick={ () => this.filterMovies(this.state.userInput)}> Filter </button>
-                <span className="resultsBox filterStringRB"> Filtered Movies { JSON.stringify(this.state.filterMovies, null, 10) } </span>                
+                <span className="resultsBox filterStringRB"> Filtered Movies: { JSON.stringify(this.state.filteredMovies, null, 10) } </span>                
             </div>
         )
     }

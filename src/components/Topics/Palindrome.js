@@ -35,7 +35,7 @@ export default class Palindrome extends Component {
            <div className="puzzleBox palindromePB">
                <h4>Palindrome</h4>
                <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
-               <button className="confirmationButton" onclick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
+               <button className="confirmationButton" onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
                <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
            </div>
         )
