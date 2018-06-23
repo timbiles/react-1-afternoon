@@ -14,7 +14,7 @@ export default class TopicBrowser extends Component {
                 <EvenAndOdd/>
                 <FilterObject/>
                 <FilterString/>
-                {/* <Palindrome/> */}
+                <Palindrome/>
                 {/* <Sum/>                 */}
             </div>
         )

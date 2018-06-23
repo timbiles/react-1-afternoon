@@ -27,6 +27,7 @@ export default class FilterString extends Component {
                 filteredMovies.push(movies[i]);
             }
         }
+        this.setState({ filteredMovies: filteredMovies});
     }
 
     render () {
@@ -34,10 +35,13 @@ export default class FilterString extends Component {
             <div className="puzzleBox filterStringPB">
                 <h4> Filter String </h4>
                 <span className="puzzleText"> Movies { JSON.stringify(this.state.movies, null, 10)}</span>
-                <input className="inputLine" onChange={ e => this.handleChange(e.target.value) }/>
+                <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
                 <button className="confirmationButton" onClick={ () => this.filterMovies(this.state.userInput)}> Filter </button>
                 <span className="resultsBox filterStringRB"> Filtered Movies { JSON.stringify(this.state.filterMovies, null, 10) } </span>                
             </div>
         )
     }
 }
+
+
+
