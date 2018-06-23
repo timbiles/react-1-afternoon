@@ -15,7 +15,7 @@ export default class TopicBrowser extends Component {
                 <FilterObject/>
                 <FilterString/>
                 <Palindrome/>
-                {/* <Sum/>                 */}
+                <Sum/>                
             </div>
         )
     }
